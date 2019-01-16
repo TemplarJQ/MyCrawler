@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+
+# record by jqliu
+
+# items文件是用来保存数据的数据结构
+# middlewares定义了爬取过程中的中间件，处理request等东西
+# settings定义了许多配置信息
+
+# 显示网页信息print写在主要的文件里quotes.py
+# 然后存储的数据结构写在items里
+
+# scrapy有一个强大的功能就是可以输入scrapy shell + 网址 直接查询进入交互模式
+# 在交互模式下输入response，response.css都可以查看返回的信息
+
+# 先是单页索引，如果索引多页就需要自动翻页功能，这时就引入对翻页信息的读取，比如next
+
+# 写错了一个pager导致没有找到url，这个错误都可以通过scrapy shell测试来避免!!!!!
+
