@@ -14,6 +14,8 @@ BOT_NAME = 'MyCrawler'
 SPIDER_MODULES = ['MyCrawler.spiders']
 NEWSPIDER_MODULE = 'MyCrawler.spiders'
 
+MONGO_URI = 'localhost'
+MONGO_DB = 'quotestusorial'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'MyCrawler (+http://www.yourdomain.com)'
@@ -64,9 +66,11 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'MyCrawler.pipelines.MycrawlerPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'MyCrawler.pipelines.TextPipeline': 300,
+   'MyCrawler.pipelines.MongoPipeline': 400,
+}
+# 300 400代表的是执行顺序
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

@@ -16,3 +16,5 @@
 
 # 写错了一个pager导致没有找到url，这个错误都可以通过scrapy shell测试来避免!!!!!
 
+# 当我们的项目对item里面的东西需要切分的时候，就需要在pipline项目文件里新建一个textpipline类来完成我们的筛选。
+# pipeline的生效需要在setting里面ITEM_PIPELINES设置
